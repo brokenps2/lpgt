@@ -12,7 +12,7 @@ const char *vertexShaderSource = "#version 330 core\n"
 const char *fragmentShaderSource = "#version 330 core\n"
   "out vec4 fColor;\n"
   "void main() {\n"
-    "fColor = vec4(0.0f, 0.5f, 0.2f, 1.0f);\n"
+    "fColor = vec4(0.0f, 0.8f, 1.0f, 1.0f);\n"
   "}\0";
 
 

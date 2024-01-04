@@ -20,7 +20,7 @@ int main(int argc, char* argv[]) {
     updRenderer();
 
   }
-
+ 
   return 0;
 
 }
