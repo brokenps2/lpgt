@@ -7,7 +7,9 @@ SDL_Window* window;
 
 void initWindow() {
   window = SDL_CreateWindow("chisel", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 640, 480, SDL_WINDOW_OPENGL);
+
   glewInit();
+  glewExperimental = GL_TRUE;
 
   SDL_GL_CreateContext(window);
 
