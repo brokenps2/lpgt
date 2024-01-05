@@ -2,14 +2,15 @@
 #include <GL/glew.h>
 #include <SDL2/SDL_opengl.h>
 
-const char *vertexShaderSource = "#version 330 core\n"
-    "layout (location = 0) in vec3 aPos;\n"
-    "void main()\n"
-    "{\n"
-    "   gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n"
-    "}\0";
+const char *vertexShaderSource = 
+  "#version 330 core\n"
+  "layout (location = 0) in vec3 aPos;\n"
+  "void main() {\n"
+    "gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n"
+  "}\0";
 
-const char *fragmentShaderSource = "#version 330 core\n"
+const char *fragmentShaderSource = 
+  "#version 330 core\n"
   "out vec4 fColor;\n"
   "void main() {\n"
     "fColor = vec4(0.0f, 0.8f, 1.0f, 1.0f);\n"
@@ -33,7 +34,7 @@ void initRenderer() {
   vertexShader = glCreateShader(GL_VERTEX_SHADER);
   glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
   glCompileShader(vertexShader);
-  
+
   fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
   glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
   glCompileShader(fragmentShader);

@@ -1,11 +1,16 @@
+#include <string>
 #include <SDL2/SDL.h>
 #include "windowmgr.h"
 #include <SDL2/SDL_video.h>
 #include "renderer.h"
+#include "config.h"
+#include <stdio.h>
 
 int main(int argc, char* argv[]) {
 
   SDL_Init(SDL_INIT_EVERYTHING);
+
+  cfgSetPath("master.cfg");
 
   initWindow();
   initRenderer();
