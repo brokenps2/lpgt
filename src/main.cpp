@@ -4,7 +4,6 @@
 #include <SDL2/SDL_video.h>
 #include "renderer.h"
 #include "config.h"
-#include <stdio.h>
 
 int main(int argc, char* argv[]) {
 
