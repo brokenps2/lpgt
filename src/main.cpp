@@ -10,7 +10,13 @@ int main(int argc, char* argv[]) {
 
   SDL_Init(SDL_INIT_EVERYTHING);
 
-  cfgSetPath("master.cfg");
+  if(argc < 2 || argc > 2) {
+    printf("Usage: chiselengine [config file path]\n");
+    printf("this will be handled by the launcher eventually\n");
+    exit(1);
+  }
+
+  cfgSetPath(argv[1]);
 
   initWindow();
   initRenderer();

@@ -1,5 +1,4 @@
 #include <iostream>
-#include <fstream>
 #include <string>
 #include <libconfig.h++>
 
@@ -20,7 +19,7 @@ int cfgGetResX() {
     cfg.readFile(path);
   }
   catch(const FileIOException &fioex) {
-    std::cerr << "I/O error while reading file." << std::endl;
+    std::cerr << "I/O Error Reading configuration file" << std::endl;
     exit(1);
   }
   catch(const ParseException &pex) {
@@ -51,7 +50,7 @@ int cfgGetResY() {
     cfg.readFile(path);
   }
   catch(const FileIOException &fioex) {
-    std::cerr << "I/O error while reading file." << std::endl;
+    std::cerr << "I/O error while reading configuration file." << std::endl;
     exit(1);
   }
   catch(const ParseException &pex) {
@@ -82,7 +81,7 @@ string cfgGetTitle() {
     cfg.readFile(path);
   }
   catch(const FileIOException &fioex) {
-    std::cerr << "I/O error while reading file." << std::endl;
+    std::cerr << "I/O error while reading configuration file." << std::endl;
     exit(1);
   }
   catch(const ParseException &pex) {
