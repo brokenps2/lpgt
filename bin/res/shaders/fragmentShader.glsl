@@ -1,7 +1,5 @@
 #version 330 core
 
-uniform bool frame;
-
 out vec4 fragColor;
   
 in vec2 outTexCoord;
@@ -18,16 +16,10 @@ vec3 greyscale(vec3 color, float str) {
 
 void main() {
 
-    if(!frame) {
-        if(lightEnabled) {
-            fragColor = texture(tex0, outTexCoord) * vec4(outLightColor, 1.0);
-        } else {
-            fragColor = texture(tex0, outTexCoord);
-        }
+    if(lightEnabled) {
+        fragColor = texture(tex0, outTexCoord) * vec4(outLightColor, 1.0);
     } else {
-        vec3 col = vec3(texture(screenTexture, outTexCoord)).rgb;
-        
-        fragColor = vec4(col, 1.0);
+        fragColor = texture(tex0, outTexCoord);
     }
 
 

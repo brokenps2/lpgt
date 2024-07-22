@@ -9,8 +9,6 @@
 #include "Input.h"
 #include "Camera.h"
 #include <GLFW/glfw3.h>
-#include <tslib.h>
-
 
 double oldMouseX = 0, oldMouseY = 0, newMouseX = 0, newMouseY = 0;
 
