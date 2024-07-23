@@ -49,7 +49,7 @@ void main() {
     }
 
     gl_Position = camMatrix * transMatrix * vec4(position, 1.0);
-    gl_Position = snap(gl_Position, vec2(128, 96));
+    gl_Position = snap(gl_Position, vec2(320, 240));
     outTexCoord = texCoord;
 
 }
